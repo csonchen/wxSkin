@@ -1,0 +1,12 @@
+<view class="intro {{ theme }}">
+  <view class="font mb10">正常字体</view>
+  <view class="font font-vi mb10">vi色字体</view>
+  <view class="btn main-btn mb10">主色按钮</view>
+  <view class="btn sub-btn">辅色按钮</view>
+</view>
+
+<view class="theme-btn-group">
+  <view class="theme-btn" bindtap="handleChange" data-theme="theme1">主题1</view>
+  <view class="theme-btn" bindtap="handleChange" data-theme="theme2">主题2</view>
+  <view class="theme-btn" bindtap="handleChange" data-theme="theme3">主题3</view>
+</view>

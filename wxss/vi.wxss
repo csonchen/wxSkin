@@ -1,0 +1,32 @@
+.test {
+  color: #f00;
+  font: 14px Arial, sans-seri;
+  border-radius: 4px;
+}
+.theme1 .font-vi {
+  color: #fe473c;
+}
+.theme1 .main-btn {
+  background: #fe473c;
+}
+.theme1 .sub-btn {
+  background: #ffb800;
+}
+.theme2 .font-vi {
+  color: #ff9e00;
+}
+.theme2 .main-btn {
+  background: #ff9e00;
+}
+.theme2 .sub-btn {
+  background: #454545;
+}
+.theme3 .font-vi {
+  color: #d7b782;
+}
+.theme3 .main-btn {
+  background: #d7b782;
+}
+.theme3 .sub-btn {
+  background: #cfc5ae;
+}
