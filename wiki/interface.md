@@ -161,7 +161,7 @@ module.exports = Behavior({
 
 ### 具体使用
 
-1. 小程序启动，我们就需要去请求接口的色值配置接口，获取主题样式，如果是需要从后台返回前台的时候也要考虑主题变动，可以在 `onShow` 方法处理
+1. 小程序启动，我们就需要去请求色值配置接口，获取主题样式，如果是需要从后台返回前台的时候也要考虑主题变动，可以在 `onShow` 方法处理
 
 ```javascript
 // app.js
@@ -186,7 +186,9 @@ App({
 })
 ```
 
-2. 页面混入主题样式字段
+2. 混入主题样式字段
+
+- `Page` 页面混入
 
 ```javascript
 // interface.js
@@ -199,7 +201,34 @@ Page({
 })
 ```
 
-3. 页面内联样式动态换肤
+- `Component` 组件混入
+
+```javascript
+// wxButton.js
+const viBehaviors = require('../../js/viBehaviors');
+
+Component({
+  behaviors: [viBehaviors],
+
+  properties: {
+    // 按钮文本
+    btnText: {
+      type: String,
+      value: ''
+    },
+
+    // 是否为辅助按钮，更换辅色皮肤
+    secondary: {
+      type: Boolean,
+      value: false
+    }
+  }
+})
+```
+
+3. 内联样式动态换肤
+
+- `Page` 页面动态换肤
 
 ```xml
 <view class="intro">
@@ -207,10 +236,23 @@ Page({
   <view class="font font-vi mb10" style="{{_.s(vi, 'color')}}">vi色字体</view>
   <view class="btn main-btn mb10" style="{{_.s(vi, 'background')}}">主色按钮</view>
   <view class="btn sub-btn" style="{{_.s(vi, 'background', true)}}">辅色按钮</view>
+
+  <!-- 按钮组件 -->
+  <wxButton class="mb10" btnText="组件按钮（主色）" />
+  <wxButton class="mb10" btnText="组件按钮（辅色）" secondary />
 </view>
 
 <!-- 引入模板函数 -->
 <wxs module="_" src="../../wxs/vi.wxs"></wxs>
+```
+
+- `Component` 组件动态换肤
+
+```xml
+<view class="btn" style="{{_.s(vi, 'background', secondary)}}">{{ btnText }}</view>
+
+<!-- 模板函数 -->
+<wxs module="_" src="../../wxs/vi.wxs" />
 ```
 
 再来对比一下传统的内联方式处理换肤功能的实现：
@@ -219,7 +261,13 @@ Page({
 <view style="color: {{ mainColor }}; background: {{ background }}">vi色字体</view>
 ```
 
-如果再加入逻辑代码，对于开发人员后期阅读代码简直就是要抓狂了；这只是一定程度上简化了内联代码的编写，原理还是内联样式的注入。
+如果后期再加入复杂的逻辑代码，开发人员后期再去阅读代码简直就是要抓狂的；
+
+当然了，这篇文章的方案只是一定程度上简化了内联代码的编写，原理还是内联样式的注入；
+
+我目前有一个想法，想通过某种手段在获取接口主题样式字段之后，借助 `stylus` 等预编译语言的变量机制，动态修改其变量，改变主题样式，方为上策；
+
+**总结：这两篇文章只是给大家提供一下小程序换肤的解决思路，文中如有不足之处，希望大家多多留言，或者去github上给我提issue，必定及时处理，谢谢大家。**
 
 ### 效果预览
 
