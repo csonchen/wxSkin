@@ -2,7 +2,12 @@
   <view class="font mb10">正常字体</view>
   <view class="font font-vi mb10" style="{{_.s(vi, 'color')}}">vi色字体</view>
   <view class="btn main-btn mb10" style="{{_.s(vi, 'background')}}">主色按钮</view>
-  <view class="btn sub-btn" style="{{_.s(vi, 'background', true)}}">辅色按钮</view>
+  <view class="btn sub-btn mb10" style="{{_.s(vi, 'background', true)}}">辅色按钮</view>
+  
+  <!-- 按钮组件 -->
+  <wxButton class="mb10" btnText="组件按钮（主色）" />
+  <wxButton class="mb10" btnText="组件按钮（辅色）" secondary />
 </view>
+
 
 <wxs module="_" src="../../wxs/vi.wxs"></wxs>

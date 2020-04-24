@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "wxButton": "/components/wxButton/wxButton"
+  }
 }

@@ -1,0 +1,4 @@
+<view class="btn" style="{{_.s(vi, 'background', secondary)}}">{{ btnText }}</view>
+
+<!-- 模板函数 -->
+<wxs module="_" src="../../wxs/vi.wxs" />
