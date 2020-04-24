@@ -201,7 +201,7 @@ Page({
 
 3. 页面内联样式动态换肤
 
-```html
+```xml
 <view class="intro">
   <view class="font mb10">正常字体</view>
   <view class="font font-vi mb10" style="{{_.s(vi, 'color')}}">vi色字体</view>
@@ -215,7 +215,7 @@ Page({
 
 再来对比一下传统的内联方式处理换肤功能的实现：
 
-```html
+```xml
 <view style="color: {{ mainColor }}; background: {{ background }}">vi色字体</view>
 ```
 
