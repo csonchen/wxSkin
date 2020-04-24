@@ -1,0 +1,45 @@
+.intro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.font {
+  color:#323232;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.btn {
+  width: 200px;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+}
+
+.main-btn {
+  background: #f09;
+}
+
+.sub-btn {
+  background: aquamarine;
+}
+
+.theme-btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.theme-btn {
+  width: 80px;
+  text-align-last: center;
+  height: 40px;
+  line-height: 40px;
+  background: rgb(99, 103, 240);
+  color: #fff;
+  margin: 0 10px;
+}

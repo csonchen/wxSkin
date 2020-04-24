@@ -1,0 +1,20 @@
+var STYLE_TEMPLATE = {
+  color: function(val) {
+    return 'color: ' + val + '!important;'
+  },
+
+  background: function(val) {
+    return 'background: ' + val + '!important;'
+  }
+}
+
+module.exports = {
+  s: function(theme, key, second = false) {
+    theme = theme || {}
+    
+    if (typeof theme === 'object') {
+      var color = second ? theme.subColor : theme.mainColor
+      return STYLE_TEMPLATE[key](color)
+    }
+  }
+}

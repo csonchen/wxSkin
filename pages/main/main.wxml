@@ -1,0 +1,7 @@
+<view class="page">
+  <view class="flex-column flex-center-xy">
+    <view class="font20 bold mb20">小程序动态换肤方案</view>
+    <navigator class="normal-btn mb15" url="/pages/index/index">1. 本地篇</navigator>
+    <navigator class="normal-btn mb15" url="/pages/interface/interface">2. 接口篇</navigator>
+  </view>
+</view>

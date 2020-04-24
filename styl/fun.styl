@@ -1,0 +1,55 @@
+.flex 
+  display flex
+
+.flex-center 
+  justify-content center
+
+.flex-between
+  justify-content space-between  
+
+.flex-middle
+  align-items center
+
+.flex-column
+  @extend .flex
+  flex-direction column
+
+.flex-center-between 
+  @extend .flex
+  @extend .flex-center 
+  @extend .flex-between  
+
+.flex-center-xy
+  @extend .flex
+  @extend .flex-center 
+  @extend .flex-middle
+
+.page 
+  @extend .flex-center-xy
+  margin-top -100px  
+  min-height 100vh  
+  width 100%
+
+.mb10
+  margin-bottom 10px
+
+.mb15 
+  margin-bottom 15px
+
+.mb20
+  margin-bottom 20px  
+
+.bold
+  font-weight bold
+
+.font20
+  font-size 20px
+
+.normal-btn 
+  width 150px
+  height 42px
+  line-height 42px
+  background #0366d6
+  text-align center
+  color #fff
+  border-radius: 5px

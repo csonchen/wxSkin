@@ -1,0 +1,8 @@
+<view class="intro">
+  <view class="font mb10">正常字体</view>
+  <view class="font font-vi mb10" style="{{_.s(vi, 'color')}}">vi色字体</view>
+  <view class="btn main-btn mb10" style="{{_.s(vi, 'background')}}">主色按钮</view>
+  <view class="btn sub-btn" style="{{_.s(vi, 'background', true)}}">辅色按钮</view>
+</view>
+
+<wxs module="_" src="../../wxs/vi.wxs"></wxs>
