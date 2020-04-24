@@ -1,3 +1,9 @@
+/**
+ * css属性模板字符串构造
+ * 
+ * color => color属性字符串赋值构造
+ * background => background属性字符串赋值构造
+ */
 var STYLE_TEMPLATE = {
   color: function(val) {
     return 'color: ' + val + '!important;'
@@ -9,6 +15,13 @@ var STYLE_TEMPLATE = {
 }
 
 module.exports = {
+  /**
+   * 模板字符串方法
+   * 
+   * @param theme 主题样式对象
+   * @param key 需要构建内联css属性
+   * @param second 是否需要用到辅色
+   */
   s: function(theme, key, second = false) {
     theme = theme || {}
     

@@ -3,23 +3,23 @@
  * @param {*} mainColor 主色值
  * @param {*} subColor 辅色值
  */
-function ViModal(mainColor, subColor) {
-  if (typeof ViModal.instance == 'object') {
-    return ViModal.instance
+function ViModel(mainColor, subColor) {
+  if (typeof ViModel.instance == 'object') {
+    return ViModel.instance
   }
 
   this.mainColor = mainColor
   this.subColor = subColor
-  ViModal.instance = this
+  ViModel.instance = this
   return this
 }
 
 module.exports = {
   save: function(mainColor = '', subColor = '') {
-    return new ViModal(mainColor, subColor)
+    return new ViModel(mainColor, subColor)
   },
 
   get: function() {
-    return new ViModal()
+    return new ViModel()
   }
 }

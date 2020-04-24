@@ -1,5 +1,5 @@
 const observer = require('./observer');
-const viModal = require('./viModal');
+const viModel = require('./viModel');
 
 module.exports = Behavior({
   data: {
@@ -13,9 +13,9 @@ module.exports = Behavior({
     }.bind(this))
 
     // 2. 如果接口响应较快，modal有值，直接赋值，进行换肤
-    var modal = viModal.get()
-    if (modal.mainColor || modal.subColor) {
-      this.setData({ vi: modal })
+    var model = viModel.get()
+    if (model.mainColor || model.subColor) {
+      this.setData({ vi: model })
     }
   },
 
