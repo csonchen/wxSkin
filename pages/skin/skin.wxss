@@ -2,3 +2,8 @@
   padding: 20px;
   color: var(--main-color);
 }
+
+.skinBtn {
+  margin-top: 10px;
+  float: left;
+}

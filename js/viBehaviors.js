@@ -8,7 +8,7 @@ module.exports = Behavior({
 
   attached() {
     // 1. 如果接口响应过长，创建监听，回调函数中读取结果进行换肤
-    observer.addNotice('kNoticeVi', function(res) {
+    observer.addNotice(`kNoticeVi`, function(res) {
       this.setData({ vi: res })
     }.bind(this))
 
@@ -20,6 +20,6 @@ module.exports = Behavior({
   },
 
   detached() {
-    observer.removeNotice('kNoticeVi')
+    observer.removeNotice(`kNoticeVi`)
   }
 })

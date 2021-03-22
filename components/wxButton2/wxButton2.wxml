@@ -1,0 +1,1 @@
+<view class="btn-default btn {{secondary ? 'btn-secondary' : ''}}" style="{{themeStyle}}">{{ btnText }}</view>

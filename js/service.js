@@ -26,7 +26,7 @@ const getSkinSettings = () => {
       } else {
         reject({ code: resData.code, message: '网络出错了' })
       }
-    }, 500)
+    }, 5000)
   })
 }
 

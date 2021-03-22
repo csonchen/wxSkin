@@ -1,6 +1,7 @@
 const observer = require('./observer');
 const viModel = require('./viModel');
 
+
 module.exports = Behavior({
   data: {
     themeStyle: null
@@ -15,7 +16,6 @@ module.exports = Behavior({
     // 2. 如果接口响应较快，modal有值，直接赋值，进行换肤
     const themeData = viModel.get()
     if (themeData.mainColor || themeData.subColor) {
-      console.log('test: ', themeData)
       this.setThemeStyle(themeData)
     }
   },

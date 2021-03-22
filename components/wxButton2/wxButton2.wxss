@@ -1,0 +1,15 @@
+.btn {
+  width: 200px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn.btn-default {
+  background: var(--main-color, #0366d6);
+}
+
+.btn.btn-secondary {
+  background: var(--sub-color, #0366d6);
+}
