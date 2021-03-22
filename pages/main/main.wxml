@@ -3,5 +3,6 @@
     <view class="font20 bold mb20">小程序动态换肤方案</view>
     <navigator class="normal-btn mb15" url="/pages/index/index">1. 本地篇</navigator>
     <navigator class="normal-btn mb15" url="/pages/interface/interface">2. 接口篇</navigator>
+    <navigator class="normal-btn mb15" url="/pages/skin/skin">3. 终极篇</navigator>
   </view>
 </view>

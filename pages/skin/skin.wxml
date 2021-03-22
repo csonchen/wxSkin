@@ -1,0 +1,5 @@
+<view class="page" style="{{themeStyle}}">
+  换肤终极篇
+
+  <navigator class="normal-btn mb15" url="/pages/test/test">3. 终极篇</navigator>
+</view>
